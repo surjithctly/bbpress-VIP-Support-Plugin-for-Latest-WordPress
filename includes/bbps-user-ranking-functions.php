@@ -140,7 +140,7 @@ function bbps_display_trusted_tag(){
 	
 	if ( get_option('_bbps_enable_trusted_tag')== 1 && (!empty($user->wp_capabilities['bbp_moderator']) == 1 )  )
 	{
-		echo '<div id="trusted" class="badge badge_staff">Support Staff</div>';
+		echo '<div id="trusted" class="badge badge_staff">Staff</div>';
 	}
 }
 

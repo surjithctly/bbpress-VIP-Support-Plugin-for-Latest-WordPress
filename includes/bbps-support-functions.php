@@ -39,7 +39,9 @@ function bbps_add_support_forum_features(){
 		$user_id = get_current_user_id();
 		
 		
-		?> <div id="bbps_support_forum_options"><br> <?php
+		?> <div id="bbps_support_forum_options">
+
+        <br> <?php
 		//get out the option to tell us who is allowed to view and update the drop down list.
 		if ( $can_edit == true ){ ?>
 			<?php bbps_generate_status_options($topic_id,$status);
@@ -463,4 +465,6 @@ function bbps_modify_title($title, $topic_id = 0){
 
 	
 add_action('bbp_theme_before_topic_title', 'bbps_modify_title');
+ add_action('bbp_template_before_single_topic', 'bbps_modify_title');
+ 
 ?>
